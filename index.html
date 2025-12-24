@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Combate | Muay Thai de Verdade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        .bg-gradient-hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?auto=format&fit=crop&q=80&w=2070'); background-size: cover; background-position: center; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100">
+
+    <header class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter text-red-600">PRO COMBATE</div>
+            <a href="#contato" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full font-bold transition-all text-sm">AULA EXPERIMENTAL</a>
+        </div>
+    </header>
+
+    <section class="h-[80vh] flex items-center justify-center text-center bg-gradient-hero">
+        <div class="max-w-3xl px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">A Ciência das Oito Armas</h1>
+            <p class="text-xl md:text-2xl text-zinc-300 mb-8 font-light">Não é apenas treino. É técnica, disciplina e o aprendizado real de uma arte milenar.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#metodologia" class="bg-white text-black px-8 py-4 rounded-md font-bold hover:bg-zinc-200 transition">CONHECER METODOLOGIA</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 container mx-auto px-4 border-b border-zinc-900">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-red-600 mb-4">O que é o Muay Thai?</h2>
+                <p class="text-zinc-400 leading-relaxed mb-6">
+                    Originário da Tailândia, o Muay Thai utiliza de forma estratégica oito pontos de contato: **punhos, cotovelos, joelhos e canelas**. Muito além do condicionamento físico, é uma arte de defesa e ataque que exige inteligência, precisão e controle emocional.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-zinc-900 p-4 rounded border-l-4 border-red-600">
+                        <span class="block font-bold">Defesa Real</span>
+                    </div>
+                    <div class="bg-zinc-900 p-4 rounded border-l-4 border-red-600">
+                        <span class="block font-bold">Resiliência</span>
+                    </div>
+                </div>
+            </div>
+            <div id="metodologia" class="bg-zinc-900 p-8 rounded-xl border border-zinc-800">
+                <h2 class="text-3xl font-bold text-white mb-4">Nossa Metodologia</h2>
+                <p class="text-zinc-400 mb-6">Focamos no ensino pedagógico. Você não vem apenas para "suar", mas para entender a biomecânica e a história da luta.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 text-zinc-300">
+                        <span class="text-red-600 font-bold">01.</span>
+                        <span>**Aprendizado Técnico:** Aulas estruturadas do básico ao avançado.</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-zinc-300">
+                        <span class="text-red-600 font-bold">02.</span>
+                        <span>**Graduação Tradicional:** Sistema de Kruang para evolução constante.</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-zinc-300">
+                        <span class="text-red-600 font-bold">03.</span>
+                        <span>**Foco no Aluno:** Respeito absoluto aos limites e à integridade física.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-zinc-900/50 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 italic">Grade de Treinos (Seg a Sex)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                <div class="bg-zinc-900 p-6 rounded border border-zinc-800 hover:border-red-600 transition">
+                    <span class="text-red-600 font-bold block mb-2 underline">MANHÃ</span>
+                    <p class="text-xl">06:00 às 07:00</p>
+                    <p class="text-xl">08:00 às 09:00</p>
+                </div>
+                <div class="bg-zinc-900 p-6 rounded border border-zinc-800 hover:border-red-600 transition">
+                    <span class="text-red-600 font-bold block mb-2 underline">TARDE</span>
+                    <p class="text-xl font-bold">16:30 às 17:30</p>
+                </div>
+                <div class="bg-zinc-900 p-6 rounded border border-zinc-800 hover:border-red-600 transition md:col-span-3">
+                    <span class="text-red-600 font-bold block mb-2 underline">NOITE</span>
+                    <div class="flex justify-around">
+                        <p class="text-xl font-bold">18:30 às 19:30</p>
+                        <p class="text-xl font-bold">19:30 às 20:30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 container mx-auto px-4 flex flex-col items-center">
+        <h2 class="text-3xl font-bold mb-10">Equipamentos Obrigatórios</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="text-center w-40">
+                <div class="bg-zinc-800 w-24 h-24 mx-auto rounded-full flex items-center justify-center mb-4 border-2 border-red-600">
+                    <span class="text-2xl">🥊</span>
+                </div>
+                <p class="font-bold">Luvas de Muay Thai</p>
+            </div>
+            <div class="text-center w-40">
+                <div class="bg-zinc-800 w-24 h-24 mx-auto rounded-full flex items-center justify-center mb-4 border-2 border-red-600">
+                    <span class="text-2xl">🛡️</span>
+                </div>
+                <p class="font-bold">Caneleiras</p>
+            </div>
+        </div>
+        <p class="text-zinc-500 mt-8 text-sm italic">*Segurança é prioridade. Não permitimos treinos sem proteção.*</p>
+    </section>
+
+    <section class="py-20 bg-red-600 text-white px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12">Escolha seu Plano</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-950 p-8 rounded-lg">
+                    <h3 class="text-xl mb-4">Essencial</h3>
+                    <p class="text-zinc-400 mb-6">2x por semana</p>
+                    <div class="text-4xl font-bold mb-6">R$ 90,00<span class="text-sm font-normal">/mês</span></div>
+                    <button class="w-full border border-white py-2 rounded hover:bg-white hover:text-black transition">COMEÇAR</button>
+                </div>
+                <div class="bg-zinc-100 text-zinc-950 p-8 rounded-lg transform scale-105 shadow-2xl">
+                    <span class="bg-red-600 text-white px-3 py-1 text-xs rounded-full mb-4 inline-block font-bold">MAIS POPULAR</span>
+                    <h3 class="text-xl mb-4 font-bold">Guerreiro</h3>
+                    <p class="text-zinc-600 mb-6 font-bold">Todos os dias</p>
+                    <div class="text-5xl font-bold mb-6 italic text-red-600">R$ 130,00<span class="text-sm font-normal text-zinc-900">/mês</span></div>
+                    <button class="w-full bg-red-600 text-white py-3 rounded font-bold hover:bg-red-700 transition shadow-lg">QUERO ESTE</button>
+                </div>
+                <div class="bg-zinc-950 p-8 rounded-lg">
+                    <h3 class="text-xl mb-4">Intermediário</h3>
+                    <p class="text-zinc-400 mb-6">3x por semana</p>
+                    <div class="text-4xl font-bold mb-6">R$ 110,00<span class="text-sm font-normal">/mês</span></div>
+                    <button class="w-full border border-white py-2 rounded hover:bg-white hover:text-black transition">COMEÇAR</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="py-20 bg-black border-t border-zinc-900 px-4">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Localização & Contato</h2>
+                <p class="text-zinc-400 mb-4 font-bold">Endereço:</p>
+                <p class="text-zinc-300 mb-8">Rua Exemplo, 123 - Centro<br>Cidade/Estado - CEP 00000-000</p>
+                
+                <p class="text-zinc-400 mb-4 font-bold">Telefone / WhatsApp:</p>
+                <a href="tel:5511999999999" class="text-2xl text-red-600 hover:underline">(00) 00000-0000</a>
+            </div>
+            <div class="h-64 bg-zinc-800 rounded-lg overflow-hidden flex items-center justify-center italic text-zinc-500">
+                [Espaço para Mapa do Google ou Foto da Fachada]
+            </div>
+        </div>
+        <div class="text-center mt-20 text-zinc-600 text-sm">
+            © 2025 PRO COMBATE - MUAY THAI. Todos os direitos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
