@@ -304,6 +304,12 @@ ul {
     background-color: #e4e4e7;
 }
 
+.equip-icon {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
 /* Schedule Section */
 .schedule-title {
     font-size: 2.5rem;
