@@ -87,6 +87,73 @@ ul {
     background-color: #fff;
 }
 
+/* ============================
+   NOVAS ADIÇÕES (UI/UX)
+   ============================ */
+
+/* Top Bar Info */
+.top-bar {
+    background-color: #dc2626;
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    /* Garante que fique acima de tudo se quiser fixar */
+    /* position: sticky; top: 0; z-index: 100; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.top-bar-icon {
+    color: #ffd700;
+    /* Yellow */
+    vertical-align: middle;
+    width: 1.25rem;
+    height: 1.25rem;
+    /* margin-bottom: 2px; removed this as flexbox handles alignment better */
+}
+
+
+/* Notas de Plano (Flexibilidade) */
+.plan-note {
+    font-size: 0.85rem;
+    text-transform: none;
+    color: #71717a;
+    display: block;
+    margin-top: 0.25rem;
+    font-weight: 400;
+}
+
+/* Chamada para Aula Experimental dentro do Card */
+.experimental-nudge {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #dc2626;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilo dos Depoimentos */
+.testimonial-card {
+    background-color: #27272a;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ============================
+   FIM NOVAS ADIÇÕES
+   ============================ */
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1599058917233-359190141a0e?q=80&w=2070&auto=format&fit=crop');
@@ -340,6 +407,22 @@ ul {
     padding: 2rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
     border: 1px solid #3f3f46;
+    /* Para o hint do mobile */
+    position: relative;
+}
+
+/* Dica visual para mobile */
+@media (max-width: 768px) {
+    .table-wrapper::after {
+        content: 'Arraste para o lado →';
+        position: absolute;
+        bottom: 0.5rem;
+        right: 1rem;
+        font-size: 0.8rem;
+        color: #a1a1aa;
+        pointer-events: none;
+        opacity: 0.8;
+    }
 }
 
 .schedule-table {
@@ -754,9 +837,17 @@ ul {
 /* --- Refinamentos de UI --- */
 
 /* Alinhamento e Sombras */
-.items-center { align-items: center; }
-.rounded-lg { border-radius: 1.5rem; }
-.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+.items-center {
+    align-items: center;
+}
+
+.rounded-lg {
+    border-radius: 1.5rem;
+}
+
+.shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
 
 /* FAQ Styling */
 .faq-grid {
@@ -767,7 +858,9 @@ ul {
 }
 
 @media (min-width: 768px) {
-    .faq-grid { grid-template-columns: 1fr 1fr; }
+    .faq-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .faq-item {
@@ -778,7 +871,10 @@ ul {
     transition: transform 0.3s ease;
 }
 
-.faq-item:hover { transform: translateY(-5px); border-color: #dc2626; }
+.faq-item:hover {
+    transform: translateY(-5px);
+    border-color: #dc2626;
+}
 
 .faq-question {
     font-family: 'Archivo Black', sans-serif;
@@ -795,9 +891,20 @@ ul {
 
 /* Animação de Pulso no WhatsApp (Aumenta Conversão) */
 @keyframes pulse-green {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
 
 .whatsapp-float {
@@ -817,4 +924,221 @@ ul {
     width: 4rem;
     height: 4rem;
     margin-bottom: 1rem;
+}
+
+
+/* ============================
+   NOVA GRADE DE HORÁRIOS (CARDS)
+   ============================ */
+
+.schedule-grid {
+    display: grid;
+    gap: 2rem;
+    /* Mobile First: 1 coluna por padrão */
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Em telas maiores, usa 3 colunas */
+@media (min-width: 768px) {
+    .schedule-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.schedule-card {
+    background-color: #27272a;
+    /* Fundo cinza escuro */
+    border: 1px solid #3f3f46;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedule-card:hover {
+    transform: translateY(-5px);
+    border-color: #dc2626;
+    /* Borda vermelha ao passar o mouse */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    margin-bottom: 2rem;
+}
+
+.period-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+}
+
+.period-icon {
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3f3f46;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    /* Ícone redondo fica mais moderno */
+    margin-bottom: 0.5rem;
+}
+
+.time-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.time-badge {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #d4d4d8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.2s;
+}
+
+.time-badge:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Destaque para horário especial (ex: Tarde) */
+.time-badge.text-red-border {
+    border-color: #dc2626;
+    color: white;
+    background-color: rgba(220, 38, 38, 0.1);
+}
+
+
+/* ============================
+   REMODELAGEM: METODOLOGIA
+   ============================ */
+
+/* Espaçamento extra para separar visualmente */
+.mt-16 {
+    margin-top: 4rem;
+}
+
+/* Grid de Benefícios (Cards) */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature-card {
+    background-color: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #e4e4e7;
+    text-align: left;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #dc2626;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #fef2f2;
+    /* Fundo vermelho bem claro */
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #18181b;
+}
+
+.feature-text {
+    color: #52525b;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Layout Híbrido para Info + Equipamentos */
+.grid-2-visual {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .grid-2-visual {
+        grid-template-columns: 1.5fr 1fr;
+        /* Esquerda maior que a direita */
+    }
+}
+
+.info-box {
+    padding-right: 2rem;
+}
+
+.equip-box {
+    background-color: #f4f4f5;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 2px dashed #d4d4d8;
+    /* Borda tracejada dá ar de "checklist" */
+}
+
+.equip-grid-mini {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.equip-mini-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.equip-mini-img {
+    height: 3rem;
+    width: auto;
+    object-fit: contain;
+}
+
+.text-sm {
+    font-size: 0.875rem;
 }
