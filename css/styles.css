@@ -345,6 +345,9 @@ ul {
     text-decoration-thickness: 3px;
     line-height: 1.5em;
 }
+h3.sub-title {
+    font-size: 1.20rem;
+}
 
 .text-red-underline {
     color: #dc2626;
