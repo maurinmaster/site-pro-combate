@@ -751,9 +751,9 @@ h3.sub-title {
 
 .footer-map iframe {
     border-radius: 1rem;
-    filter: grayscale(100%) invert(92%) contrast(83%);
+    /* filter: grayscale(100%) invert(92%) contrast(83%);
     /* Dark styled map */
-    transition: filter 0.3s;
+   /*  transition: filter 0.3s; */ 
 }
 
 .footer-map:hover iframe {
