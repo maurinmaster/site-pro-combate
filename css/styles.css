@@ -46,7 +46,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    
 }
 
 html {
@@ -734,6 +734,9 @@ ul {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
+.negrito-experimental {
+    font-weight: 700;
+}
 
 /* Animations */
 @keyframes fadeIn {
@@ -834,5 +837,62 @@ ul {
     .time-badge {
         font-size: 1.1rem;
         /* Smaller badges primarily for mobile */
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(9,9,11,1));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-benefits {
+    margin: 2rem 0;
+    list-style: none;
+    padding: 0;
+}
+
+.hero-benefits li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.hero-proof {
+    margin-top: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+}
+
+.mobile-cta {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-cta {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--accent);
+        z-index: 999;
+    }
+
+    .mobile-cta a {
+        width: 100%;
+        padding: 1.2rem;
+        text-align: center;
+        color: white;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
     }
 }
