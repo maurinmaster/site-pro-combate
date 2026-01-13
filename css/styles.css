@@ -788,8 +788,16 @@ ul {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
+.cta-text{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
 .negrito-experimental {
     font-weight: 700;
+}
+
+.hero-logo-horizontal{
+    margin-bottom: 2rem;
 }
 
 /* Animations */
