@@ -1070,4 +1070,67 @@ ul {
     font-size: 1rem;
 }
 
+/* =========================================
+   MELHORIA: Secção Conceito e Equipamentos
+   ========================================= */
 
+/* Utilitário de espaçamento que faltava */
+.mb-large {
+    margin-bottom: 3rem;
+}
+
+/* Alinha a altura dos cards para ficarem iguais */
+.align-stretch {
+    align-items: stretch;
+}
+
+.concept-card {
+    background: linear-gradient(180deg, var(--bg-card), #0f0f11); /* Gradiente subtil */
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Para empurrar conteúdo para baixo se necessário */
+}
+
+/* Efeito Hover elegante */
+.concept-card:hover {
+    border-color: var(--accent); /* Fica vermelho na borda */
+    transform: translateY(-5px); /* Sobe um pouco */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Cabeçalho com ícone e título alinhados */
+.card-icon-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 1rem;
+}
+
+.sub-title.mb-0 {
+    margin-bottom: 0;
+    text-align: left; /* Garante alinhamento à esquerda */
+}
+
+/* Ajuste de texto para ficar consistente */
+.text-sm {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Utilitário para margem automática (empurra footer do card para baixo) */
+.mt-auto {
+    margin-top: auto;
+}
+
+/* Ajuste nos cards pequenos de equipamento para caberem melhor */
+.equip-mini-card {
+    width: 120px; /* Um pouco menor para garantir que cabem */
+    padding: 1rem;
+    background: rgba(0,0,0,0.3); /* Fundo mais escuro */
+}
