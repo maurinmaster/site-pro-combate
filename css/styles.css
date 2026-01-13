@@ -1142,3 +1142,44 @@ ul {
     padding: 1rem;
     background: rgba(0,0,0,0.3); /* Fundo mais escuro */
 }
+
+/* =========================================
+   FIXES & REFACTORING (Clean Code)
+   ========================================= */
+
+.schedule-note {
+    margin-top: 1rem;
+    color: var(--text-muted);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.schedule-note strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.testimonial-author {
+    margin-top: 1.5rem;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.sub-title {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+/* Specific context override */
+#professor .sub-title {
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
