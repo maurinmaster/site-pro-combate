@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Combate | Design System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            padding-bottom: 100px;
+        }
+        
+        .ds-section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ds-title {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            font-family: 'Archivo Black', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .ds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Color Swatches */
+        .color-swatch {
+            height: 100px;
+            border-radius: var(--radius-md, 0.5rem);
+            border: 1px solid var(--border-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .color-name {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .color-var {
+            color: var(--text-muted);
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+
+        /* Typography */
+        .type-row {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .type-meta {
+            color: var(--text-muted);
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Spacing Visualizer */
+        .spacing-box {
+            background: var(--accent);
+            height: 20px;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Design System &nbsp;|&nbsp; Pro Combate v1.0
+    </div>
+
+    <div class="container">
+
+        <header class="section text-center">
+            <h1 class="hero-title" style="font-size: 3rem;">Design System</h1>
+            <p class="text-content">
+                Guia de estilos, tokens e componentes para a interface do Pro Combate.
+            </p>
+        </header>
+
+        <!-- 1. Colors -->
+        <section class="ds-section">
+            <h2 class="ds-title">Cores</h2>
+            <div class="ds-grid">
+                <div>
+                    <div class="color-swatch" style="background: var(--bg-main)"></div>
+                    <div class="color-name">Background Main</div>
+                    <div class="color-var">--bg-main</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background: var(--bg-card)"></div>
+                    <div class="color-name">Background Card</div>
+                    <div class="color-var">--bg-card</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background: var(--bg-card-hover)"></div>
+                    <div class="color-name">Background Hover</div>
+                    <div class="color-var">--bg-card-hover</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background: var(--accent)"></div>
+                    <div class="color-name">Accent Red</div>
+                    <div class="color-var">--accent</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background: var(--accent-dark)"></div>
+                    <div class="color-name">Accent Dark</div>
+                    <div class="color-var">--accent-dark</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background: var(--gold)"></div>
+                    <div class="color-name">Gold</div>
+                    <div class="color-var">--gold</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background: var(--text-primary)"></div>
+                    <div class="color-name">Text Primary</div>
+                    <div class="color-var">--text-primary</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background: var(--text-secondary)"></div>
+                    <div class="color-name">Text Secondary</div>
+                    <div class="color-var">--text-secondary</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background: var(--text-muted)"></div>
+                    <div class="color-name">Text Muted</div>
+                    <div class="color-var">--text-muted</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background: var(--border-color)"></div>
+                    <div class="color-name">Border</div>
+                    <div class="color-var">--border-color</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Typography -->
+        <section class="ds-section">
+            <h2 class="ds-title">Tipografia</h2>
+            
+            <div class="type-row">
+                <span class="type-meta">Font Family: Archivo Black (Headings)</span>
+                <h1>H1 - Título Principal</h1>
+            </div>
+
+            <div class="type-row">
+                <span class="type-meta">Font Family: Archivo Black (Headings)</span>
+                <h2>H2 - Subtítulo de Seção</h2>
+            </div>
+
+            <div class="type-row">
+                <span class="type-meta">Font Family: Archivo Black (Headings)</span>
+                <h3>H3 - Título de Card</h3>
+            </div>
+
+            <div class="type-row">
+                <span class="type-meta">Font Family: Inter (Body)</span>
+                <p>
+                    <strong>Parágrafo (Body):</strong> O Muay Thai é conhecido como a Arte das 8 Armas, pois trabalha punhos, cotovelos, joelhos e canelas. Na Pro Combate, ele é usado como um sistema completo de condicionamento físico.
+                </p>
+            </div>
+
+            <div class="type-row">
+                <span class="type-meta">.text-content (Large Body)</span>
+                <p class="text-content" style="margin:0">
+                    Texto de destaque para introduções de seção. Um pouco maior e com cor secundária para leitura confortável.
+                </p>
+            </div>
+
+            <div class="type-row">
+                <span class="type-meta">.text-muted (Small/Caption)</span>
+                <p class="text-muted">
+                    Texto pequeno para legendas, notas de rodapé ou detalhes secundários.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. Buttons -->
+        <section class="ds-section">
+            <h2 class="ds-title">Botões</h2>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <div>
+                    <button class="btn btn-primary">Primary Button</button>
+                    <div class="type-meta" style="margin-top: 0.5rem">.btn .btn-primary</div>
+                </div>
+
+                <div>
+                    <button class="btn btn-outline">Outline Button</button>
+                    <div class="type-meta" style="margin-top: 0.5rem">.btn .btn-outline</div>
+                </div>
+
+                <div>
+                    <button class="btn btn-plan">Plan Button</button>
+                    <div class="type-meta" style="margin-top: 0.5rem">.btn-plan</div>
+                </div>
+
+                <div>
+                    <button class="btn btn-plan btn-featured">Featured Button</button>
+                    <div class="type-meta" style="margin-top: 0.5rem">.btn-plan .btn-featured</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Components: Cards -->
+        <section class="ds-section">
+            <h2 class="ds-title">Cards</h2>
+            
+            <div class="grid-3">
+                <!-- Feature Card -->
+                <div class="feature-card">
+                    <div class="feature-icon">🥊</div>
+                    <h3 class="feature-title">Feature Card</h3>
+                    <p class="feature-text">Card usado para destacar metodologias ou benefícios.</p>
+                </div>
+
+                <!-- Price Card -->
+                <div class="price-card">
+                    <h3 class="plan-name">Price Card</h3>
+                    <div class="plan-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">99</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Item de lista</li>
+                        <li>Item de lista</li>
+                    </ul>
+                    <button class="btn btn-plan">Ação</button>
+                </div>
+
+                <!-- Testimonial Card -->
+                <div class="testimonial-card">
+                    <p>"Um exemplo de depoimento de aluno dentro de um card dedicado."</p>
+                    <h4 class="text-red" style="margin-top: 1rem; font-weight: 700;">- Nome do Aluno</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Forms & Inputs (Future Proofing) -->
+        <section class="ds-section">
+            <h2 class="ds-title">Formulários</h2>
+            <p class="text-content">Estilos base para inputs (caso necessário no futuro).</p>
+            
+            <div style="max-width: 400px; display: grid; gap: 1rem;">
+                <input type="text" class="form-input" placeholder="Exemplo de Input (a criar)">
+                <select class="form-select">
+                    <option>Selecione uma opção</option>
+                </select>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
