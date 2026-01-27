@@ -5,20 +5,30 @@
    ========================================= */
 :root {
     /* Color Palette - Dark Premium */
-    --bg-main: #09090b;     /* Zinc 950 */
-    --bg-card: #18181b;     /* Zinc 900 */
-    --bg-card-hover: #27272a; /* Zinc 800 */
+    --bg-main: #09090b;
+    /* Zinc 950 */
+    --bg-card: #18181b;
+    /* Zinc 900 */
+    --bg-card-hover: #27272a;
+    /* Zinc 800 */
 
-    --text-primary: #fafafa;   /* Zinc 50 */
-    --text-secondary: #a1a1aa; /* Zinc 400 */
-    --text-muted: #71717a;     /* Zinc 500 */
+    --text-primary: #fafafa;
+    /* Zinc 50 */
+    --text-secondary: #a1a1aa;
+    /* Zinc 400 */
+    --text-muted: #71717a;
+    /* Zinc 500 */
 
-    --accent: #ef4444;       /* Red 500 */
-    --accent-dark: #dc2626;  /* Red 600 */
+    --accent: #ef4444;
+    /* Red 500 */
+    --accent-dark: #dc2626;
+    /* Red 600 */
     --accent-glow: rgba(239, 68, 68, 0.5);
 
-    --gold: #fbbf24;         /* Amber 400 */
-    --border-color: #27272a; /* Zinc 800 */
+    --gold: #fbbf24;
+    /* Amber 400 */
+    --border-color: #27272a;
+    /* Zinc 800 */
 
     /* Typography Scale */
     --font-h1: 3rem;
@@ -37,10 +47,14 @@
 
     /* Borders & Radius */
     --radius-sm: 4px;
-    --radius-md: 0.5rem;  /* 8px */
-    --radius-lg: 0.75rem; /* 12px */
-    --radius-xl: 1rem;    /* 16px */
-    --radius-2xl: 1.2rem; /* ~19px */
+    --radius-md: 0.5rem;
+    /* 8px */
+    --radius-lg: 0.75rem;
+    /* 12px */
+    --radius-xl: 1rem;
+    /* 16px */
+    --radius-2xl: 1.2rem;
+    /* ~19px */
 
     /* Layout */
     --container-width: 1280px;
@@ -57,7 +71,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 html {
@@ -537,14 +551,16 @@ ul {
     transition: all 0.4s ease;
     overflow: hidden;
 }
+
 .price-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.04), transparent);
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.04), transparent);
     opacity: 0;
     transition: 0.4s;
 }
+
 .price-card:hover::before {
     opacity: 1;
 }
@@ -552,13 +568,13 @@ ul {
 .price-card:hover {
     transform: translateY(-10px) scale(1.02);
     border-color: var(--accent);
-    box-shadow: 0 20px 50px rgba(239,68,68,0.25);
+    box-shadow: 0 20px 50px rgba(239, 68, 68, 0.25);
 }
 
 .price-card.featured {
     background: linear-gradient(160deg, #1a0b0b, #09090b);
     border: 2px solid var(--accent);
-    box-shadow: 0 0 60px rgba(239,68,68,0.4);
+    box-shadow: 0 0 60px rgba(239, 68, 68, 0.4);
     transform: scale(1.05);
     z-index: 5;
 }
@@ -598,6 +614,7 @@ ul {
     font-size: 1.2rem;
     color: var(--text-muted);
 }
+
 .plan-price .amount {
     font-size: 4.5rem;
     font-weight: 900;
@@ -618,6 +635,7 @@ ul {
     color: var(--text-secondary);
     font-size: 0.95rem;
 }
+
 .plan-features li::before {
     content: "✓";
     color: var(--accent);
@@ -737,27 +755,75 @@ ul {
     padding: 5rem 0 2rem;
 }
 
-.footer-logo {
-    color: white;
-    font-size: 2rem;
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+.footer-logo-img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 2.5rem;
+    display: block;
+}
+
+.footer-contact p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.social-links {
+    margin-top: 2rem;
 }
 
 .social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
     background: var(--bg-card-hover);
     color: white;
     border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
 }
 
 .social-btn:hover {
     background: var(--accent);
     border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.footer-map {
+    height: 100%;
+    min-height: 300px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
 }
 
 .footer-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
     filter: invert(90%) hue-rotate(180deg);
-    border-radius: 0.5rem;
     opacity: 0.8;
     transition: opacity 0.3s;
+    display: block;
 }
 
 .footer-map iframe:hover {
@@ -788,15 +854,17 @@ ul {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
-.cta-text{
+
+.cta-text {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
+
 .negrito-experimental {
     font-weight: 700;
 }
 
-.hero-logo-horizontal{
+.hero-logo-horizontal {
     margin-bottom: 2rem;
 }
 
@@ -904,7 +972,7 @@ ul {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(9,9,11,1));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(9, 9, 11, 1));
     z-index: 1;
 }
 
@@ -957,6 +1025,7 @@ ul {
         letter-spacing: 0.05em;
     }
 }
+
 .schedule-header {
     text-align: center;
     padding: 2rem 1rem;
@@ -997,13 +1066,14 @@ ul {
 }
 
 .schedule-row:hover {
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .schedule-row.muted {
     opacity: 0.5;
     font-size: 0.9rem;
 }
+
 .schedule-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -1015,6 +1085,7 @@ ul {
     flex-direction: column;
     align-items: center;
 }
+
 .methodology {
     text-align: center;
     max-width: 1100px;
@@ -1051,7 +1122,7 @@ ul {
 .method-card:hover {
     transform: translateY(-10px);
     border-color: var(--accent);
-    box-shadow: 0 0 40px rgba(239,68,68,0.2);
+    box-shadow: 0 0 40px rgba(239, 68, 68, 0.2);
 }
 
 .method-step {
@@ -1093,20 +1164,24 @@ ul {
 }
 
 .concept-card {
-    background: linear-gradient(180deg, var(--bg-card), #0f0f11); /* Gradiente subtil */
+    background: linear-gradient(180deg, var(--bg-card), #0f0f11);
+    /* Gradiente subtil */
     border: 1px solid var(--border-color);
     padding: 2.5rem;
     border-radius: var(--radius-lg);
     position: relative;
     transition: all 0.3s ease;
     display: flex;
-    flex-direction: column; /* Para empurrar conteúdo para baixo se necessário */
+    flex-direction: column;
+    /* Para empurrar conteúdo para baixo se necessário */
 }
 
 /* Efeito Hover elegante */
 .concept-card:hover {
-    border-color: var(--accent); /* Fica vermelho na borda */
-    transform: translateY(-5px); /* Sobe um pouco */
+    border-color: var(--accent);
+    /* Fica vermelho na borda */
+    transform: translateY(-5px);
+    /* Sobe um pouco */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -1116,13 +1191,14 @@ ul {
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding-bottom: 1rem;
 }
 
 .sub-title.mb-0 {
     margin-bottom: 0;
-    text-align: left; /* Garante alinhamento à esquerda */
+    text-align: left;
+    /* Garante alinhamento à esquerda */
 }
 
 /* Ajuste de texto para ficar consistente */
@@ -1138,9 +1214,11 @@ ul {
 
 /* Ajuste nos cards pequenos de equipamento para caberem melhor */
 .equip-mini-card {
-    width: 120px; /* Um pouco menor para garantir que cabem */
+    width: 120px;
+    /* Um pouco menor para garantir que cabem */
     padding: 1rem;
-    background: rgba(0,0,0,0.3); /* Fundo mais escuro */
+    background: rgba(0, 0, 0, 0.3);
+    /* Fundo mais escuro */
 }
 
 /* =========================================
