@@ -1378,4 +1378,44 @@ ul {
     .mobile-schedule-container {
         display: block;
     }
+}/* Mini Plans Summary in Modal */
+.plans-mini-summary {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.plan-mini {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.plan-mini:last-of-type {
+    border-bottom: none;
+}
+
+.plan-mini strong {
+    color: var(--accent);
+}
+
+.plan-mini-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.secure-note {
+    display: block;
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
 }

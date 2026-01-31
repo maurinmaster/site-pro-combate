@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const step1 = document.getElementById('step-1');
     const step2 = document.getElementById('step-2');
     const submitContainer = document.getElementById('form-submit-container');
+    const stepPlans = document.getElementById('step-plans');
 
     let formData = {
         time: '',
@@ -49,6 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (group === 'time') {
                 step2.classList.remove('hidden');
             } else if (group === 'price') {
+                if (value.includes('Sim')) {
+                    if (stepPlans) stepPlans.classList.remove('hidden');
+                } else {
+                    if (stepPlans) stepPlans.classList.add('hidden');
+                }
                 submitContainer.classList.remove('hidden');
             }
         });
@@ -63,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const phoneNumber = '557581466368'; // Replace with real number
+        const phoneNumber = '557581466368';
         const text = `Olá! Gostaria de agendar uma AULA GRÁTIS.\n\n🕒 Horário de preferência: *${formData.time}*\n💰 Dúvida sobre valores: *${formData.price}*`;
 
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
@@ -76,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData = { time: '', price: '' };
         document.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('active'));
         step2.classList.add('hidden');
+        if (stepPlans) stepPlans.classList.add('hidden');
         submitContainer.classList.add('hidden');
     }
 });
