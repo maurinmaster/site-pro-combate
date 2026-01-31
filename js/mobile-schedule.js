@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const phoneNumber = '5575999999999'; // Replace with real number
+        const phoneNumber = '557581466368'; // Replace with real number
         const text = `Olá! Gostaria de agendar uma AULA GRÁTIS.\n\n🕒 Horário de preferência: *${formData.time}*\n💰 Dúvida sobre valores: *${formData.price}*`;
 
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
