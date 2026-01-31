@@ -5,13 +5,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('schedule-form');
     const step1 = document.getElementById('step-1');
     const step2 = document.getElementById('step-2');
-    const submitContainer = document.getElementById('form-submit-container');
     const stepPlans = document.getElementById('step-plans');
+    const footer = document.getElementById('contato'); // Target the footer or last section
+    const mobileContainer = document.getElementById('mobile-schedule-container');
 
     let formData = {
         time: '',
         price: ''
     };
+
+    // Initially hide the button
+    if (mobileContainer) {
+        mobileContainer.style.display = 'none';
+        mobileContainer.style.opacity = '0';
+        mobileContainer.style.transition = 'opacity 0.5s ease';
+    }
+
+    // Intersection Observer to show button only when footer is in view
+    if (footer && mobileContainer) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Show button when footer is visible
+                    mobileContainer.style.display = 'block';
+                    // Small delay to allow display block to apply before opacity transition
+                    setTimeout(() => {
+                        mobileContainer.style.opacity = '1';
+                    }, 10);
+                } else {
+                    // Hide button when footer is not visible
+                    mobileContainer.style.opacity = '0';
+                    setTimeout(() => {
+                        if (mobileContainer.style.opacity === '0') {
+                            mobileContainer.style.display = 'none';
+                        }
+                    }, 500); // Match transition duration
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1 // Trigger when 10% of footer is visible
+        });
+
+        observer.observe(footer);
+    }
 
     // Open Modal
     mobileBtn.addEventListener('click', () => {
