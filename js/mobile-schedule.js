@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileContainer = document.getElementById('mobile-schedule-container');
 
     let formData = {
-        time: '',
-        price: ''
+        time: ''
     };
 
     // Initially hide the button
@@ -85,14 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Logic to advance steps
             if (group === 'time') {
-                step2.classList.remove('hidden');
-            } else if (group === 'price') {
-                if (value.includes('Sim')) {
-                    if (stepPlans) stepPlans.classList.remove('hidden');
-                } else {
-                    if (stepPlans) stepPlans.classList.add('hidden');
+                // Show submit button immediately
+                const submitContainer = document.getElementById('form-submit-container');
+                if (submitContainer) {
+                    submitContainer.classList.remove('hidden');
                 }
-                submitContainer.classList.remove('hidden');
             }
         });
     });
@@ -101,13 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        if (!formData.time || !formData.price) {
-            alert('Por favor, selecione todas as opções.');
+        if (!formData.time) {
+            alert('Por favor, selecione um horário.');
             return;
         }
 
-        const phoneNumber = '557581466368';
-        const text = `Olá! Gostaria de agendar uma AULA GRÁTIS.\n\n🕒 Horário de preferência: *${formData.time}*\n💰 Dúvida sobre valores: *${formData.price}*`;
+        const phoneNumber = '5575981466368'; // Fixed phone number
+        const text = `Olá! Gostaria de agendar uma AULA GRÁTIS.\n\n🕒 Horário de preferência: *${formData.time}*`;
 
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
 
@@ -116,10 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function resetForm() {
-        formData = { time: '', price: '' };
+        formData = { time: '' };
         document.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('active'));
-        step2.classList.add('hidden');
-        if (stepPlans) stepPlans.classList.add('hidden');
-        submitContainer.classList.add('hidden');
+        const submitContainer = document.getElementById('form-submit-container');
+        if (submitContainer) submitContainer.classList.add('hidden');
     }
 });
