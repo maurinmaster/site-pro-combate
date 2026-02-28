@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Força HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://procombate.com%{REQUEST_URI} [R=301,L]
+
+# Força host canônico sem www
+RewriteCond %{HTTP_HOST} ^www\.procombate\.com$ [NC]
+RewriteRule ^ https://procombate.com%{REQUEST_URI} [R=301,L]
