@@ -1419,3 +1419,40 @@ ul {
     margin-top: 0.5rem;
     font-size: 0.8rem;
 }
+
+
+/* CTA flutuante WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 12px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.whatsapp-float__icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.whatsapp-float:hover {
+    filter: brightness(1.05);
+}
+
+@media (max-width: 600px) {
+    .whatsapp-float {
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        justify-content: center;
+    }
+}

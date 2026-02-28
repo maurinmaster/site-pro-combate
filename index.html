@@ -39,6 +39,9 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
+    <link rel="preload" as="image" href="img/logo.png">
+    <link rel="preconnect" href="https://wa.me" crossorigin>
+
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
@@ -94,7 +97,7 @@
 
         <div class="hero-content">
 
-            <img src="img/logo.png" alt="Pro Combate - Academia de Muay Thai" class="hero-logo">
+            <img src="img/logo.png" alt="Pro Combate - Academia de Muay Thai" class="hero-logo" fetchpriority="high" decoding="async">
 
 
             <span class="hero-subtitle">ACADEMIA DE MUAY THAI EM FEIRA DE SANTANA</span>
@@ -228,13 +231,13 @@
 
                     <div class="equip-grid-mini">
                         <div class="equip-mini-card">
-                            <img src="img/luvas-boxe.png" alt="Luvas de Boxe para treino de Muay Thai"
+                            <img src="img/luvas-boxe.png" alt="Luvas de Boxe para treino de Muay Thai" loading="lazy" decoding="async"
                                 class="equip-mini-img">
                             <span>Luvas</span>
                         </div>
 
                         <div class="equip-mini-card">
-                            <img src="img/caneleira-muay-thai.png" alt="Caneleiras para proteção no Muay Thai"
+                            <img src="img/caneleira-muay-thai.png" alt="Caneleiras para proteção no Muay Thai" loading="lazy" decoding="async"
                                 class="equip-mini-img">
                             <span>Caneleiras</span>
                         </div>
@@ -388,7 +391,7 @@
     <section id="professor" class="section bg-white">
         <div class="container grid-2">
             <div class="prof-image">
-                <img src="img/professor-mauro.jpg" alt="Professor Mauro - Mestre de Muay Thai">
+                <img src="img/professor-mauro.jpg" alt="Professor Mauro - Mestre de Muay Thai" loading="lazy" decoding="async">
             </div>
             <div>
                 <h2 class="section-title">Conheça seu Mestre</h2>
@@ -462,7 +465,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <img src="img/logo-horizontal.png" alt="Pro Combate" class="footer-logo-img">
+                    <img src="img/logo-horizontal.png" alt="Pro Combate" class="footer-logo-img" loading="lazy" decoding="async">
                     <div class="footer-contact">
                         <p>
                             <strong>Endereço:</strong><br>
@@ -572,6 +575,31 @@
             </form>
         </div>
     </div>
+
+    
+    <a href="https://wa.me/5575981466368?text=Olá%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20grátis."
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Agendar aula grátis no WhatsApp">
+        <span class="whatsapp-float__icon" aria-hidden="true">💬</span>
+        <span class="whatsapp-float__text">Agendar aula grátis</span>
+    </a>
+
+    <script>
+        (function () {
+            const utm = 'utm_source=site&utm_medium=whatsapp&utm_campaign=cta';
+            document.querySelectorAll('a[href*="wa.me/"]').forEach((a) => {
+                try {
+                    const url = new URL(a.href);
+                    if (!url.searchParams.has('utm_source')) {
+                        utm.split('&').forEach((pair) => {
+                            const [k, v] = pair.split('=');
+                            url.searchParams.set(k, v);
+                        });
+                        a.href = url.toString();
+                    }
+                } catch (e) { }
+            });
+        })();
+    </script>
 
     <script src="js/mobile-schedule.js"></script>
 </body>
