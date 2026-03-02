@@ -257,43 +257,87 @@
         <div class="container">
             <h2 class="schedule-title">Grade de Horários (Segunda a Sexta)</h2>
 
-            <div class="schedule-card">
-
+            <div class="schedule-card schedule-card-v2">
                 <div class="schedule-header">
-                    <h3>Horários de Treino</h3>
-                    <span>Segunda a Sexta</span>
+                    <h3>Escolha seu melhor horário</h3>
+                    <span>Todas as aulas têm 60 minutos</span>
                 </div>
 
-                <div class="schedule-table">
-                    <div class="schedule-row">
-                        <span>06:00 às 07:00</span>
-                        <span>Manhã</span>
-                    </div>
-
-                    <div class="schedule-row">
-                        <span>08:00 às 09:00</span>
-                        <span>Manhã</span>
-                    </div>
-
-                    <div class="schedule-row">
-                        <span>16:30 às 17:30</span>
-                        <span>Tarde</span>
-                    </div>
-
-                    <div class="schedule-row">
-                        <span>18:30 às 19:30</span>
-                        <span>Noite</span>
-                    </div>
-
-                    <div class="schedule-row">
-                        <span>19:30 às 20:30</span>
-                        <span>Noite</span>
-                    </div>
-                    <p class="schedule-note">
-                        *O horário das <strong>19:30</strong> não funciona às sextas.
-                    </p>
+                <div class="schedule-legend">
+                    <span class="period-chip manha">Manhã</span>
+                    <span class="period-chip tarde">Tarde</span>
+                    <span class="period-chip noite">Noite</span>
                 </div>
 
+                <div class="schedule-grid-wrap">
+                    <table class="schedule-grid" aria-label="Grade de horários da Pro Combate">
+                        <thead>
+                            <tr>
+                                <th>Horário</th>
+                                <th>Seg</th>
+                                <th>Ter</th>
+                                <th>Qua</th>
+                                <th>Qui</th>
+                                <th>Sex</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">06:00 às 07:00 <span class="badge manha">Manhã</span></td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="time">08:00 às 09:00 <span class="badge manha">Manhã</span></td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="time">16:30 às 17:30 <span class="badge tarde">Tarde</span></td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="time">18:30 às 19:30 <span class="badge noite">Noite</span></td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="time">19:30 às 20:30 <span class="badge noite">Noite</span></td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="available">✓</td>
+                                <td class="unavailable">—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="schedule-note">Sexta não há turma às <strong>19:30</strong>.</p>
+
+                <div class="schedule-actions">
+                    <a href="https://wa.me/5575981466368?text=Ol%C3%A1%2C%20quero%20treinar%20na%20Pro%20Combate.%20Pode%20me%20ajudar%20a%20escolher%20um%20hor%C3%A1rio%3F"
+                        target="_blank" class="btn btn-primary">
+                        Quero treinar nesse horário
+                    </a>
+                    <a href="https://wa.me/5575981466368?text=Ol%C3%A1%2C%20estou%20compartilhando%20a%20grade%20de%20hor%C3%A1rios%20da%20Pro%20Combate%3A%0A%0A*Segunda%20a%20Quinta*%0A06%3A00%20%C3%A0s%2007%3A00%0A08%3A00%20%C3%A0s%2009%3A00%0A16%3A30%20%C3%A0s%2017%3A30%0A18%3A30%20%C3%A0s%2019%3A30%0A19%3A30%20%C3%A0s%2020%3A30%0A%0A*Sexta*%0A06%3A00%20%C3%A0s%2007%3A00%0A08%3A00%20%C3%A0s%2009%3A00%0A16%3A30%20%C3%A0s%2017%3A30%0A18%3A30%20%C3%A0s%2019%3A30%0A%28sem%20turma%20%C3%A0s%2019%3A30%29%0A%0Ahttps%3A%2F%2Fprocombate.com%2F%23horarios"
+                        target="_blank" class="btn btn-outline" id="share-schedule-btn">
+                        Compartilhar horários no WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </section>

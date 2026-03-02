@@ -489,6 +489,92 @@ ul {
     /* Handled by grid gap */
 }
 
+.schedule-card-v2 {
+    padding-bottom: 1.5rem;
+}
+
+.schedule-legend {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    padding: 1rem 1rem 0;
+}
+
+.period-chip,
+.badge {
+    border-radius: 999px;
+    padding: 0.2rem 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.period-chip.manha,
+.badge.manha {
+    background: rgba(59, 130, 246, 0.18);
+    color: #93c5fd;
+}
+
+.period-chip.tarde,
+.badge.tarde {
+    background: rgba(249, 115, 22, 0.18);
+    color: #fdba74;
+}
+
+.period-chip.noite,
+.badge.noite {
+    background: rgba(168, 85, 247, 0.18);
+    color: #d8b4fe;
+}
+
+.schedule-grid-wrap {
+    width: 100%;
+    overflow-x: auto;
+    padding: 1rem 1rem 0;
+}
+
+.schedule-grid {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+}
+
+.schedule-grid th,
+.schedule-grid td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.schedule-grid th:first-child,
+.schedule-grid td.time {
+    text-align: left;
+}
+
+.schedule-grid td.time {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.schedule-grid .available {
+    color: #4ade80;
+    font-weight: 800;
+}
+
+.schedule-grid .unavailable {
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.schedule-actions {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
 .card-header {
     background: #27272a;
     padding: 1.5rem;
@@ -1378,7 +1464,16 @@ ul {
     .mobile-schedule-container {
         display: block;
     }
-}/* Mini Plans Summary in Modal */
+
+    .schedule-actions .btn {
+        width: 100%;
+    }
+
+    .schedule-grid {
+        min-width: 560px;
+    }
+}
+/* Mini Plans Summary in Modal */
 .plans-mini-summary {
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-md);
